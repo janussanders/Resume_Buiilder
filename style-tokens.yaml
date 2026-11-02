@@ -1,0 +1,47 @@
+# Single source of truth for the resume's look. Claude should read these
+# values instead of hunting through the example files.
+
+palette:
+  primary: "#0066CC"        # name, section headings, banner background
+  secondary: "#4A90E2"      # decorative accents only (3.3:1 on white)
+  secondary_text: "#2B6CB0" # use this for subheading TEXT (5.4:1 on white)
+  body: "#2D3748"           # body text (12:1 on white)
+  tint: "#E8F1FB"           # light box backgrounds
+  on_primary: "#FFFFFF"     # text on the banner (5.6:1 on primary)
+
+alternate_palettes:
+  forest_green: { primary: "#1B5E3A", secondary_text: "#2F7D52", tint: "#E8F4EC" }
+  charcoal_gold: { primary: "#2D3748", secondary_text: "#8A6D1D", tint: "#F4EFE0" }
+  black_white:   { primary: "#000000", secondary_text: "#333333", tint: "#F2F2F2" }
+
+fonts:
+  default: Calibri
+  alternates: [Arial, Georgia, Garamond]
+
+sizes_pt:
+  name: 32
+  headline: 15
+  section_heading: 16
+  subheading: 13
+  body: 11
+  contact_line: 10.5
+
+layout:
+  page: US Letter
+  margins_in: { top_bottom: 0.6, left_right: 0.75 }
+  photo: { default: none, size_in: "2.5 x 3.5", position: top-right }
+  section_order:
+    - header            # name, headline, contact line
+    - profile_banner    # filled primary-color box, white text
+    - skills_grid       # three boxed columns, three skills each
+    - experience        # title left, dates right-aligned, bullets below
+    - projects          # optional
+    - education
+    - certifications_and_awards  # optional
+  headings:             # standard names for ATS parsing
+    profile_banner: Profile
+    skills_grid: Technical Skills
+    experience: Experience
+    projects: Projects
+    education: Education
+    certifications_and_awards: Certifications & Awards
